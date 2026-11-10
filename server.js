@@ -23,7 +23,7 @@ const upload = multer({ storage: storage });
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(session({
-    secret: 'kalikamai_secret_key',
+    secret: process.env.SESSION_SECRET || 'kalikamai_secret_key',
     resave: false,
     saveUninitialized: false
 }));

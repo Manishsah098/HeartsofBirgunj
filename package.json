@@ -2,8 +2,9 @@
   "name": "kalikamai-youth-society",
   "version": "1.0.0",
   "description": "Welcome to the official website repository for the **Kalikamai Youth Society**, a youth-led NGO dedicated to empowering disenfranchised communities in Nepal to achieve sustainable development and social justice.",
-  "main": "script.js",
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
