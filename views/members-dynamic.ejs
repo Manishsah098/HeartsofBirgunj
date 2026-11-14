@@ -100,8 +100,8 @@
                         <% if (member.facebook_url) { %>
                             <a href="<%= member.facebook_url %>" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
                         <% } %>
-                        <% if (member.twitter_url) { %>
-                            <a href="<%= member.twitter_url %>" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
+                        <% if (member.instagram_url || member.twitter_url) { %>
+                            <a href="<%= member.instagram_url || member.twitter_url %>" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
                         <% } %>
                         <% if (member.google_url) { %>
                             <a href="<%= member.google_url %>" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-google-plus-g"></i></a>
@@ -127,8 +127,8 @@
                     communities through active youth participation.</p>
                 <div class="social-links">
                     <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
                     <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="mailto:heartsofbirgunj@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-envelope"></i></a>
                     <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
@@ -157,7 +157,7 @@
             <div class="footer-contact">
                 <h3>Contact</h3>
                 <p><i class="fa-solid fa-map-pin"></i> Birgunj Mahanagarpalika, Parsa, Nepal</p>
-                <p><i class="fa-solid fa-phone"></i> +977-9763368173</p>
+                <p><i class="fa-solid fa-phone"></i> +977-9807153772</p>
                 <p><i class="fa-solid fa-envelope"></i> heartsofbirgunj@gmail.com</p>
             </div>
         </div>

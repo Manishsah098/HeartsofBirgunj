@@ -23,7 +23,7 @@ const upload = multer({ storage: storage });
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(session({
-    secret: process.env.SESSION_SECRET || 'kalikamai_secret_key',
+    secret: process.env.SESSION_SECRET || 'heartsofbirgunj_secret_key',
     resave: false,
     saveUninitialized: false
 }));
@@ -248,11 +248,12 @@ app.get('/admin/members/create', requireAuth, (req, res) => {
 });
 
 app.post('/admin/members/create', requireAuth, upload.single('image'), (req, res) => {
-    const { name, role, department, phone, facebook_url, twitter_url, google_url, linkedin_url, display_order } = req.body;
+    const { name, role, department, phone, facebook_url, instagram_url, twitter_url, google_url, linkedin_url, display_order } = req.body;
+    const final_instagram = instagram_url || twitter_url || '';
     const image_url = req.file ? 'assets/' + req.file.filename : '';
 
-    db.run(`INSERT INTO members (name, role, department, phone, image_url, facebook_url, twitter_url, google_url, linkedin_url, display_order) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-        [name, role, department, phone, image_url, facebook_url, twitter_url, google_url, linkedin_url, display_order || 0],
+    db.run(`INSERT INTO members (name, role, department, phone, image_url, facebook_url, instagram_url, twitter_url, google_url, linkedin_url, display_order) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+        [name, role, department, phone, image_url, facebook_url, final_instagram, '', google_url, linkedin_url, display_order || 0],
         (err) => {
             if (err) console.error(err);
             res.redirect('/admin/members');
@@ -268,18 +269,19 @@ app.get('/admin/members/edit/:id', requireAuth, (req, res) => {
 });
 
 app.post('/admin/members/edit/:id', requireAuth, upload.single('image'), (req, res) => {
-    const { name, role, department, phone, facebook_url, twitter_url, google_url, linkedin_url, display_order } = req.body;
+    const { name, role, department, phone, facebook_url, instagram_url, twitter_url, google_url, linkedin_url, display_order } = req.body;
+    const final_instagram = instagram_url || twitter_url || '';
     const id = req.params.id;
     
     if (req.file) {
         const image_url = 'assets/' + req.file.filename;
-        db.run(`UPDATE members SET name=?, role=?, department=?, phone=?, facebook_url=?, twitter_url=?, google_url=?, linkedin_url=?, display_order=?, image_url=? WHERE id=?`,
-            [name, role, department, phone, facebook_url, twitter_url, google_url, linkedin_url, display_order || 0, image_url, id], (err) => {
+        db.run(`UPDATE members SET name=?, role=?, department=?, phone=?, facebook_url=?, instagram_url=?, twitter_url=?, google_url=?, linkedin_url=?, display_order=?, image_url=? WHERE id=?`,
+            [name, role, department, phone, facebook_url, final_instagram, '', google_url, linkedin_url, display_order || 0, image_url, id], (err) => {
                 res.redirect('/admin/members');
             });
     } else {
-        db.run(`UPDATE members SET name=?, role=?, department=?, phone=?, facebook_url=?, twitter_url=?, google_url=?, linkedin_url=?, display_order=? WHERE id=?`,
-            [name, role, department, phone, facebook_url, twitter_url, google_url, linkedin_url, display_order || 0, id], (err) => {
+        db.run(`UPDATE members SET name=?, role=?, department=?, phone=?, facebook_url=?, instagram_url=?, twitter_url=?, google_url=?, linkedin_url=?, display_order=? WHERE id=?`,
+            [name, role, department, phone, facebook_url, final_instagram, '', google_url, linkedin_url, display_order || 0, id], (err) => {
                 res.redirect('/admin/members');
             });
     }

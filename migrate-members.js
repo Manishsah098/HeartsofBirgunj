@@ -23,10 +23,10 @@ db.serialize(() => {
     db.run(`DELETE FROM members`, (err) => {
         if(err) console.error(err);
         
-        const stmt = db.prepare(`INSERT INTO members (name, role, department, phone, image_url, facebook_url, twitter_url, google_url, linkedin_url, display_order) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`);
+        const stmt = db.prepare(`INSERT INTO members (name, role, department, phone, image_url, facebook_url, instagram_url, twitter_url, google_url, linkedin_url, display_order) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`);
         
         members.forEach((m, index) => {
-            stmt.run(m.name, m.role, m.department, m.phone, m.image_url, m.fb, m.tw, m.gp, m.li, index);
+            stmt.run(m.name, m.role, m.department, m.phone, m.image_url, m.fb, m.tw, '', m.gp, m.li, index);
         });
         
         stmt.finalize();

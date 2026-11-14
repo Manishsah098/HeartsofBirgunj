@@ -37,11 +37,15 @@ const db = new sqlite3.Database(dbPath, (err) => {
                 phone TEXT,
                 image_url TEXT,
                 facebook_url TEXT,
+                instagram_url TEXT,
                 twitter_url TEXT,
                 google_url TEXT,
                 linkedin_url TEXT,
                 display_order INTEGER DEFAULT 0
-            )`);
+            )`, () => {
+                // Ensure instagram_url column exists in existing databases
+                db.run(`ALTER TABLE members ADD COLUMN instagram_url TEXT`, () => {});
+            });
 
             db.run(`CREATE TABLE IF NOT EXISTS volunteers (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
