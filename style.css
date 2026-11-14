@@ -259,8 +259,6 @@ ul {
     border: 2.5px solid var(--white);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: var(--transition);
-    clip-path: circle(44% at center);
-    transform: scale(1.25); /* Zoom in aggresively to push black corners outside the clip area */
 }
 
 .logo-text {

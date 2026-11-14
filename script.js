@@ -39,8 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileNav.innerHTML = `
             <div class="mobile-nav-header">
                 <a href="index.html" class="logo">
-                    <img src="assets/logo.jpeg" alt="KYS" class="logo-img">
-                    <span class="logo-text">KYS</span>
+                    <img src="assets/logo.jpg" alt="Hearts of Birgunj" class="logo-img">
+                    <span class="logo-text">HOB</span>
                 </a>
                 <button class="mobile-nav-close"><i class="fa-solid fa-xmark"></i></button>
             </div>

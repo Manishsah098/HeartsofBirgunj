@@ -1,17 +1,17 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Kalikamai Youth Society</title>
+    <title>About Us | Hearts of Birgunj</title>
+    <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Consolidated Styles */
         .sub-nav {
             background: white;
             padding: 1rem 0;
@@ -21,136 +21,53 @@
             z-index: 100;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         }
-
         .sub-nav-links {
             display: flex;
             justify-content: center;
-            gap: 3rem;
+            gap: 2rem;
+            flex-wrap: wrap;
         }
-
         .sub-nav-link {
             font-weight: 600;
             color: #64748b;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             transition: color 0.3s;
         }
-
-        .sub-nav-link:hover {
-            color: #0ea5e9;
-        }
-
+        .sub-nav-link:hover { color: #0ea5e9; }
         .wwa-card {
             background: white;
             border-radius: 24px;
             padding: 2.5rem;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-            border: 1px solid rgba(0, 0, 0, 0.04);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            border: 1px solid rgba(0,0,0,0.04);
             height: 100%;
         }
-
         .wwa-card-icon {
-            width: 60px;
-            height: 60px;
+            width: 60px; height: 60px;
             border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; align-items: center; justify-content: center;
             font-size: 1.5rem;
             margin-bottom: 1.5rem;
         }
-
         .wwa-value-item {
-            display: flex;
-            gap: 1.5rem;
-            align-items: flex-start;
-            padding: 1.5rem;
-            border-radius: 20px;
-            background: #F8FAFC;
+            display: flex; gap: 1.5rem; align-items: flex-start;
+            padding: 1.5rem; border-radius: 20px; background: #F8FAFC;
         }
-
-        /* Timeline Styles */
-        .timeline-container {
-            position: relative;
-            max-width: 1000px;
-            margin: 4rem auto;
-            padding: 2rem 0;
+        .work-area-card {
+            background: white; border-radius: 20px; padding: 2rem;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.07);
+            border-left: 4px solid #0ea5e9;
         }
-
-        .timeline-container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: 4px;
-            height: 100%;
-            background: #e2e8f0;
-            transform: translateX(-50%);
-            border-radius: 2px;
-        }
-
-        .timeline-item {
-            margin-bottom: 4rem;
-            position: relative;
-            width: 50%;
-            padding: 0 3rem;
-        }
-
-        .timeline-item:nth-child(odd) {
-            left: 0;
-            text-align: right;
-        }
-
-        .timeline-item:nth-child(even) {
-            left: 50%;
-            text-align: left;
-        }
-
-        .timeline-dot {
-            position: absolute;
-            top: 0;
-            width: 20px;
-            height: 20px;
-            background: #0ea5e9;
-            border: 4px solid white;
-            border-radius: 50%;
-            z-index: 10;
-        }
-
-        .timeline-item:nth-child(odd) .timeline-dot {
-            right: -10px;
-        }
-
-        .timeline-item:nth-child(even) .timeline-dot {
-            left: -10px;
-        }
-
-        .timeline-content {
-            background: white;
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-        }
-
+        .work-area-card h4 { font-size: 1.1rem; margin-bottom: 0.8rem; color: #0ea5e9; }
+        .work-area-card ul { list-style: disc; padding-left: 1.2rem; color: #64748b; font-size: 0.95rem; line-height: 1.8; }
+        .timeline-container { position: relative; max-width: 1000px; margin: 4rem auto; padding: 2rem 0; }
+        .timeline-container::before { content: ''; position: absolute; left: 30px; top: 0; bottom: 0; width: 2px; background: rgba(255,255,255,0.2); }
+        .timeline-item { position: relative; padding-left: 80px; margin-bottom: 3rem; }
+        .timeline-dot { position: absolute; left: 22px; top: 5px; width: 18px; height: 18px; border-radius: 50%; background: #0ea5e9; border: 3px solid white; }
+        .timeline-content { background: white; border-radius: 20px; padding: 2rem; }
         @media (max-width: 768px) {
-            .sub-nav-links {
-                gap: 1.5rem;
-                font-size: 0.85rem;
-            }
-
-            .timeline-container::before {
-                left: 20px;
-            }
-
-            .timeline-item {
-                width: 100%;
-                left: 0 !important;
-                padding-left: 50px;
-                text-align: left !important;
-            }
-
-            .timeline-dot {
-                left: 10px !important;
-            }
+            .sub-nav-links { gap: 1rem; }
+            .timeline-dot { left: 10px !important; }
         }
     </style>
 </head>
@@ -167,8 +84,8 @@
     <nav class="navbar scrolled">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <img src="assets/logo.jpeg" alt="Kalikamai Youth Society" class="logo-img">
-                <span class="logo-text">कालिकामाई युवा<br>समाज</span>
+                <img src="assets/logo.jpg" alt="Hearts of Birgunj" class="logo-img">
+                <span class="logo-text">हार्ट्स अफ वीरगन्ज<br><span style="font-size:0.8rem;font-weight:500;opacity:0.85">Hearts of Birgunj</span></span>
             </a>
             <div class="nav-links">
                 <a href="about.html" class="active">About Us</a>
@@ -189,9 +106,8 @@
     <!-- Page Header -->
     <header class="page-header">
         <div class="container">
-            <h1 class="page-title">About Us</h1>
-            <p>Kalikamai Youth Society: A non-governmental, youth-driven movement dedicated to transforming lives and
-                empowering communities across Nepal.</p>
+            <h1 class="page-title">About Us — Hearts of Birgunj</h1>
+            <p>Serving Humanity, Inspiring Hope. — वीरगञ्जमा सामाजिक सेवा, मानवता र सकारात्मक परिवर्तनको संस्था।</p>
         </div>
     </header>
 
@@ -200,163 +116,367 @@
         <div class="container">
             <div class="sub-nav-links">
                 <a href="#identity" class="sub-nav-link">OUR IDENTITY</a>
+                <a href="#purpose" class="sub-nav-link">PURPOSE</a>
+                <a href="#vision-mission" class="sub-nav-link">VISION &amp; MISSION</a>
+                <a href="#work-areas" class="sub-nav-link">AREAS OF WORK</a>
                 <a href="#values" class="sub-nav-link">OUR VALUES</a>
                 <a href="#history" class="sub-nav-link">OUR JOURNEY</a>
             </div>
         </div>
     </div>
 
-    <!-- Intro section -->
+    <!-- Who We Are -->
     <section style="padding: 6rem 0;" id="identity">
         <div class="container">
-            <div
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; align-items: center;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; align-items: center;">
                 <div>
                     <h2 style="font-size: 3rem; margin-bottom: 1.5rem;">हामी को हौं <br><span style="font-size: 1.5rem; color: #64748b; font-weight: normal;">(Who We Are)</span></h2>
                     <p style="font-size: 1.15rem; line-height: 1.9; color: #475569; margin-bottom: 1.5rem;">
-                        Kalikamai Youth Society is a <strong>non-governmental, non-political, and independent
-                            association of youth</strong>. It operates under the prevailing laws and policies of the
-                        Government of Nepal.
+                        <strong>Hearts of Birgunj</strong> वीरगञ्जमा सामाजिक सेवा, मानवता, सहयोग, युवा सहभागिता तथा सकारात्मक सामाजिक परिवर्तनको उद्देश्यले स्थापना गरिएको सामाजिक संस्था हो।
                     </p>
                     <p style="font-size: 1.15rem; line-height: 1.9; color: #475569; margin-bottom: 1.5rem;">
-                        The organization aims to unify youth power and enhance their skills and capacities through
-                        various activities. It seeks to lead youth collectively toward social transformation and work
-                        for the welfare of society.
+                        यस संस्थाको मुख्य उद्देश्य समाजमा रहेका विभिन्न समस्याहरूलाई पहिचान गरी आवश्यकताअनुसार सहयोग गर्नु, असहाय, विपन्न तथा समस्यामा परेका व्यक्तिहरूलाई साथ दिनु र युवाहरूलाई सामाजिक कार्यमा सक्रिय रूपमा सहभागी गराउनु हो।
                     </p>
+                    <p style="font-size: 1.15rem; line-height: 1.9; color: #475569; margin-bottom: 1.5rem;">
+                        हामी विश्वास गर्छौँ कि समाज परिवर्तन गर्न ठूलो पद वा ठूलो स्रोतसाधनभन्दा पनि <strong>सकारात्मक सोच, सहयोगी भावना र सामूहिक प्रयास</strong> आवश्यक हुन्छ।
+                    </p>
+                    <p style="font-size: 1.15rem; line-height: 1.9; color: #475569;">
+                        त्यसैले Hearts of Birgunj ले <em>'मानवताको सेवा नै सबैभन्दा ठूलो धर्म हो'</em> भन्ने भावनालाई आत्मसात् गर्दै वीरगञ्ज तथा आसपासका क्षेत्रमा सामाजिक गतिविधिहरू सञ्चालन गर्ने लक्ष्य राखेको छ।
+                    </p>
+                    <div style="margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, #fca311, #f59e0b); border-radius: 16px; color: #1e293b;">
+                        <p style="font-size: 1.1rem; font-weight: 700; margin: 0;">"मानवताको सेवा नै सबैभन्दा ठूलो धर्म हो"</p>
+                        <p style="font-size: 0.9rem; margin: 0.3rem 0 0 0; opacity: 0.8;">— Serving Humanity, Inspiring Hope.</p>
+                    </div>
                 </div>
                 <div>
-                    <img src="assets/we-are.jpg" alt="Who We Are - Team"
-                        style="width: 100%; border-radius: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.1);">
+                    <img src="assets/we-are.jpg" alt="Hearts of Birgunj Team"
+                        style="width: 100%; border-radius: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.1);"
+                        onerror="this.style.display='none'">
+                    <div style="background: #f8fafc; border-radius: 24px; padding: 2rem; margin-top: 1.5rem; border: 1px solid #e2e8f0;">
+                        <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; text-align: center;">
+                            <div>
+                                <div style="font-size: 2rem; font-weight: 800; color: #fca311; font-family: 'Outfit', sans-serif;">2025</div>
+                                <div style="font-size: 0.85rem; color: #64748b; font-weight: 600;">ESTABLISHED</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 2rem; font-weight: 800; color: #0ea5e9; font-family: 'Outfit', sans-serif;">6+</div>
+                                <div style="font-size: 0.85rem; color: #64748b; font-weight: 600;">WORK AREAS</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 2rem; font-weight: 800; color: #22c55e; font-family: 'Outfit', sans-serif;">100%</div>
+                                <div style="font-size: 0.85rem; color: #64748b; font-weight: 600;">TRANSPARENT</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Mission/Vision Grid -->
-    <section style="background: #F8FAFC; padding: 6rem 0;">
+    <!-- Purpose Section -->
+    <section style="background: #0f172a; color: white; padding: 7rem 0;" id="purpose">
         <div class="container">
+            <div class="text-center" style="margin-bottom: 4rem;">
+                <h2 style="font-size: 2.8rem; color: white; margin-bottom: 1rem;">संस्था स्थापनाको उद्देश्य <br><span style="font-size: 1.4rem; opacity: 0.7; font-weight: normal;">(Purpose of Establishment)</span></h2>
+                <p style="color: rgba(255,255,255,0.6); font-size: 1.1rem;">Hearts of Birgunj स्थापना गर्नुका मुख्य उद्देश्यहरू</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 1.8rem; display: flex; gap: 1.2rem; align-items: flex-start;">
+                    <span style="background: #fca311; color: #1e293b; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1rem;">1</span>
+                    <p style="margin: 0; color: rgba(255,255,255,0.8); line-height: 1.7;">समाजमा मानवता, सहयोग र सेवाभावको भावना विकास गर्नु।</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 1.8rem; display: flex; gap: 1.2rem; align-items: flex-start;">
+                    <span style="background: #fca311; color: #1e293b; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1rem;">2</span>
+                    <p style="margin: 0; color: rgba(255,255,255,0.8); line-height: 1.7;">असहाय, गरिब, विपन्न, अनाथ तथा आवश्यकतामा परेका व्यक्तिहरूलाई सहयोग गर्नु।</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 1.8rem; display: flex; gap: 1.2rem; align-items: flex-start;">
+                    <span style="background: #fca311; color: #1e293b; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1rem;">3</span>
+                    <p style="margin: 0; color: rgba(255,255,255,0.8); line-height: 1.7;">युवाहरूलाई सामाजिक सेवामा आकर्षित तथा संगठित गर्नु।</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 1.8rem; display: flex; gap: 1.2rem; align-items: flex-start;">
+                    <span style="background: #fca311; color: #1e293b; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1rem;">4</span>
+                    <p style="margin: 0; color: rgba(255,255,255,0.8); line-height: 1.7;">शिक्षा, स्वास्थ्य र जनचेतनासम्बन्धी कार्यक्रम सञ्चालन गर्नु।</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 1.8rem; display: flex; gap: 1.2rem; align-items: flex-start;">
+                    <span style="background: #fca311; color: #1e293b; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1rem;">5</span>
+                    <p style="margin: 0; color: rgba(255,255,255,0.8); line-height: 1.7;">समाजमा सकारात्मक सोच, एकता र आपसी सद्भाव कायम गर्न योगदान पुर्याउनु।</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 1.8rem; display: flex; gap: 1.2rem; align-items: flex-start;">
+                    <span style="background: #fca311; color: #1e293b; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1rem;">6</span>
+                    <p style="margin: 0; color: rgba(255,255,255,0.8); line-height: 1.7;">प्राकृतिक विपद्, दुर्घटना तथा आपत्कालीन अवस्थामा आवश्यक सहयोग उपलब्ध गराउनु।</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 1.8rem; display: flex; gap: 1.2rem; align-items: flex-start;">
+                    <span style="background: #fca311; color: #1e293b; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1rem;">7</span>
+                    <p style="margin: 0; color: rgba(255,255,255,0.8); line-height: 1.7;">समाजमा रहेका कुरीति, अन्धविश्वास तथा नकारात्मक गतिविधिविरुद्ध जनचेतना फैलाउनु।</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 1.8rem; display: flex; gap: 1.2rem; align-items: flex-start;">
+                    <span style="background: #fca311; color: #1e293b; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1rem;">8</span>
+                    <p style="margin: 0; color: rgba(255,255,255,0.8); line-height: 1.7;">स्थानीय स्तरमा सामाजिक विकास तथा सामुदायिक सहभागिता बढाउनु।</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 1.8rem; display: flex; gap: 1.2rem; align-items: flex-start;">
+                    <span style="background: #fca311; color: #1e293b; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1rem;">9</span>
+                    <p style="margin: 0; color: rgba(255,255,255,0.8); line-height: 1.7;">युवा प्रतिभा, कला, संस्कृति तथा सिर्जनात्मक क्षमताको विकासका लागि अवसर प्रदान गर्नु।</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 1.8rem; display: flex; gap: 1.2rem; align-items: flex-start;">
+                    <span style="background: #fca311; color: #1e293b; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1rem;">10</span>
+                    <p style="margin: 0; color: rgba(255,255,255,0.8); line-height: 1.7;">वीरगञ्जलाई सामाजिक रूपमा अझ सभ्य, सहयोगी र विकसित बनाउन योगदान पुर्याउनु।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section style="background: #F8FAFC; padding: 7rem 0;" id="vision-mission">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 4rem;">
+                <h2 style="font-size: 2.8rem; margin-bottom: 1rem;">दृष्टि र अभियान <br><span style="font-size: 1.4rem; color: #64748b; font-weight: normal;">(Vision &amp; Mission)</span></h2>
+            </div>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
                 <div class="wwa-card">
-                    <div class="wwa-card-icon" style="background: #fff7ed;"><i class="fa-solid fa-bullseye"
-                            style="color: #fca311;"></i></div>
-                    <h3 style="margin-bottom: 1rem;">Our Mission</h3>
-                    <p style="color: #64748b;">To conduct awareness programs against social distortions and
-                        malpractices, and to build a developed society by uniting the youth community.</p>
+                    <div class="wwa-card-icon" style="background: #eff6ff;">
+                        <i class="fa-solid fa-eye" style="color: #3b82f6;"></i>
+                    </div>
+                    <h3 style="margin-bottom: 1rem; font-size: 1.4rem;">हाम्रो लक्ष्य (Vision)</h3>
+                    <p style="color: #475569; line-height: 1.8; font-size: 1.05rem;">मानवता, एकता, सहयोग र सकारात्मक सोचमा आधारित समावेशी, शिक्षित, स्वस्थ तथा सहयोगी समाजको निर्माण गर्नु।</p>
+                    <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 1rem; font-style: italic;">Build an inclusive, educated, healthy and cooperative society based on humanity, unity, cooperation and positive thinking.</p>
                 </div>
                 <div class="wwa-card">
-                    <div class="wwa-card-icon" style="background: #eff6ff;"><i class="fa-solid fa-eye"
-                            style="color: #3b82f6;"></i></div>
-                    <h3 style="margin-bottom: 1rem;">Our Vision</h3>
-                    <p style="color: #64748b;">A Nepal where every youth has the skills, opportunity, and platform to
-                        contribute meaningfully to an empowered and self-reliant society.</p>
+                    <div class="wwa-card-icon" style="background: #fff7ed;">
+                        <i class="fa-solid fa-bullseye" style="color: #fca311;"></i>
+                    </div>
+                    <h3 style="margin-bottom: 1rem; font-size: 1.4rem;">हाम्रो अभियान (Mission)</h3>
+                    <p style="color: #475569; line-height: 1.8; font-size: 1.05rem;">समाजका हरेक वर्ग र समुदायका मानिसहरूलाई एकताबद्ध गर्दै सेवा, सहयोग, जनचेतना तथा सामाजिक विकासका कार्यक्रममार्फत सकारात्मक परिवर्तन ल्याउनु।</p>
+                    <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 1rem; font-style: italic;">Unite people from all walks of life and bring positive change through service, support, awareness and social development programs.</p>
                 </div>
                 <div class="wwa-card">
-                    <div class="wwa-card-icon" style="background: #f0fdf4;"><i class="fa-solid fa-hands-holding"
-                            style="color: #22c55e;"></i></div>
-                    <h3 style="margin-bottom: 1rem;">Our Approach</h3>
-                    <p style="color: #64748b;">Community-led and youth-driven. We coordinate with local bodies to run
-                        awareness campaigns and build lasting partnerships.</p>
+                    <div class="wwa-card-icon" style="background: #f0fdf4;">
+                        <i class="fa-solid fa-hands-holding" style="color: #22c55e;"></i>
+                    </div>
+                    <h3 style="margin-bottom: 1rem; font-size: 1.4rem;">हाम्रो दृष्टिकोण (Approach)</h3>
+                    <p style="color: #475569; line-height: 1.8; font-size: 1.05rem;">समुदायमा आधारित र युवा-नेतृत्वमा। हामी स्थानीय निकायसँग समन्वय गरी जनचेतना कार्यक्रम सञ्चालन गर्छौं र दीर्घकालीन साझेदारी निर्माण गर्छौं।</p>
+                    <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 1rem; font-style: italic;">Community-led and youth-driven. Coordinating with local bodies for awareness campaigns and lasting partnerships.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Values Section -->
-    <section style="padding: 8rem 0;" id="values">
+    <!-- Areas of Work -->
+    <section style="padding: 7rem 0;" id="work-areas">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 4rem;">
+                <h2 style="font-size: 2.8rem; margin-bottom: 1rem;">कार्यक्षेत्रहरू <br><span style="font-size: 1.4rem; color: #64748b; font-weight: normal;">(Areas of Work)</span></h2>
+                <p style="color: #64748b; font-size: 1.1rem;">Hearts of Birgunj का प्रमुख ६ कार्यक्षेत्रहरू</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+                <div class="work-area-card">
+                    <h4><i class="fa-solid fa-hands-helping" style="margin-right: 0.5rem;"></i> क. सामाजिक सेवा तथा मानव सहयोग</h4>
+                    <ul>
+                        <li>गरिब तथा विपन्न परिवारलाई खाद्यान्न र आवश्यक सामग्री वितरण।</li>
+                        <li>असहाय तथा ज्येष्ठ नागरिकलाई सहयोग।</li>
+                        <li>चाडपर्व तथा विशेष अवसरमा सेवा कार्यक्रम।</li>
+                        <li>आपत्कालीन राहत तथा उद्धार कार्यमा सहयोग।</li>
+                    </ul>
+                </div>
+                <div class="work-area-card" style="border-left-color: #22c55e;">
+                    <h4 style="color: #22c55e;"><i class="fa-solid fa-heart-pulse" style="margin-right: 0.5rem;"></i> ख. स्वास्थ्य तथा सरसफाइ</h4>
+                    <ul>
+                        <li>निःशुल्क स्वास्थ्य शिविर सञ्चालनमा सहयोग।</li>
+                        <li>रक्तदान कार्यक्रम तथा रक्तदाता सञ्जाल निर्माण।</li>
+                        <li>प्राथमिक उपचार तथा स्वास्थ्य सचेतना कार्यक्रम।</li>
+                        <li>सार्वजनिक स्थानमा सरसफाइ अभियान।</li>
+                        <li>गर्मी तथा भीडभाडका समयमा निःशुल्क पानी तथा शरबत वितरण।</li>
+                    </ul>
+                </div>
+                <div class="work-area-card" style="border-left-color: #8b5cf6;">
+                    <h4 style="color: #8b5cf6;"><i class="fa-solid fa-graduation-cap" style="margin-right: 0.5rem;"></i> ग. शिक्षा तथा युवा विकास</h4>
+                    <ul>
+                        <li>विद्यार्थीहरूलाई शैक्षिक सामग्री वितरण।</li>
+                        <li>शैक्षिक जनचेतना कार्यक्रम।</li>
+                        <li>युवा नेतृत्व तथा व्यक्तित्व विकास तालिम।</li>
+                        <li>विद्यार्थी तथा युवाहरूका लागि प्रेरणादायी कार्यक्रम।</li>
+                        <li>प्रतिभाशाली तथा आर्थिक रूपमा कमजोर विद्यार्थीलाई सहयोग।</li>
+                    </ul>
+                </div>
+                <div class="work-area-card" style="border-left-color: #f59e0b;">
+                    <h4 style="color: #f59e0b;"><i class="fa-solid fa-leaf" style="margin-right: 0.5rem;"></i> घ. वातावरण संरक्षण</h4>
+                    <ul>
+                        <li>वृक्षारोपण कार्यक्रम।</li>
+                        <li>प्लास्टिक न्यूनीकरण अभियान।</li>
+                        <li>वातावरण तथा सरसफाइसम्बन्धी जनचेतना।</li>
+                        <li>स्वच्छ र हरित वीरगञ्ज अभियान।</li>
+                    </ul>
+                </div>
+                <div class="work-area-card" style="border-left-color: #e11d48;">
+                    <h4 style="color: #e11d48;"><i class="fa-solid fa-music" style="margin-right: 0.5rem;"></i> ङ. कला, संस्कृति तथा मनोरञ्जन</h4>
+                    <ul>
+                        <li>स्थानीय कला तथा संस्कृतिको संरक्षण।</li>
+                        <li>सांस्कृतिक कार्यक्रम तथा महोत्सव आयोजना।</li>
+                        <li>युवा प्रतिभा पहिचान तथा प्रोत्साहन।</li>
+                        <li>नृत्य, संगीत, खेलकुद तथा सिर्जनात्मक प्रतियोगिता।</li>
+                        <li>सामाजिक एकता तथा सद्भाव बढाउने कार्यक्रम।</li>
+                    </ul>
+                </div>
+                <div class="work-area-card" style="border-left-color: #ef4444;">
+                    <h4 style="color: #ef4444;"><i class="fa-solid fa-triangle-exclamation" style="margin-right: 0.5rem;"></i> च. विपद् तथा आपत्कालीन सहयोग</h4>
+                    <ul>
+                        <li>आगलागी, बाढी, दुर्घटना तथा अन्य विपद्मा सहयोग।</li>
+                        <li>राहत सामग्री संकलन तथा वितरण।</li>
+                        <li>स्वयंसेवक परिचालन।</li>
+                        <li>प्राथमिक उपचार तथा आपत्कालीन सहयोग।</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section style="background: #F8FAFC; padding: 7rem 0;" id="values">
         <div class="container">
             <div class="text-center" style="margin-bottom: 4rem;">
                 <h2 style="font-size: 2.8rem;">हाम्रा मुख्य मान्यताहरू <br><span style="font-size: 1.5rem; color: #64748b; font-weight: normal;">(Our Core Values)</span></h2>
-                <p style="color: #64748b; font-size: 1.1rem; margin-top: 1rem;">The principles that guide every action
-                    we take.</p>
+                <p style="color: #64748b; font-size: 1.1rem; margin-top: 1rem;">The principles that guide every action we take.</p>
             </div>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
                 <div class="wwa-value-item">
-                    <i class="fa-solid fa-landmark" style="color: #0ea5e9; font-size: 1.5rem;"></i>
+                    <i class="fa-solid fa-heart" style="color: #e11d48; font-size: 1.5rem;"></i>
                     <div>
-                        <h4 style="margin-bottom: 0.5rem;">Cultural Heritage</h4>
-                        <p style="font-size: 0.95rem; color: #64748b;">Preserving art, culture, customs, language, and
-                            traditional ways of life.</p>
+                        <h4 style="margin-bottom: 0.5rem;">मानवता (Humanity)</h4>
+                        <p style="font-size: 0.95rem; color: #64748b;">प्रत्येक मानिसको गरिमा र अधिकारको सम्मान गर्दै मानवतापूर्ण सेवा।</p>
                     </div>
                 </div>
                 <div class="wwa-value-item">
                     <i class="fa-solid fa-scale-balanced" style="color: #fca311; font-size: 1.5rem;"></i>
                     <div>
-                        <h4 style="margin-bottom: 0.5rem;">Social Justice</h4>
-                        <p style="font-size: 0.95rem; color: #64748b;">Fighting malpractices and advocating for a fair
-                            and equitable society.</p>
+                        <h4 style="margin-bottom: 0.5rem;">सामाजिक न्याय (Social Justice)</h4>
+                        <p style="font-size: 0.95rem; color: #64748b;">कुरीति र अन्धविश्वासविरुद्ध जनचेतना, न्यायपूर्ण समाजको निर्माण।</p>
                     </div>
                 </div>
                 <div class="wwa-value-item">
                     <i class="fa-solid fa-user-graduate" style="color: #8b5cf6; font-size: 1.5rem;"></i>
                     <div>
-                        <h4 style="margin-bottom: 0.5rem;">Youth Empowerment</h4>
-                        <p style="font-size: 0.95rem; color: #64748b;">Building skills and capacities that enable youth
-                            to lead change.</p>
+                        <h4 style="margin-bottom: 0.5rem;">युवा सशक्तिकरण (Youth Empowerment)</h4>
+                        <p style="font-size: 0.95rem; color: #64748b;">युवाहरूलाई सामाजिक परिवर्तनको नेतृत्व गर्न सक्षम बनाउने।</p>
+                    </div>
+                </div>
+                <div class="wwa-value-item">
+                    <i class="fa-solid fa-leaf" style="color: #22c55e; font-size: 1.5rem;"></i>
+                    <div>
+                        <h4 style="margin-bottom: 0.5rem;">वातावरण संरक्षण (Environment)</h4>
+                        <p style="font-size: 0.95rem; color: #64748b;">स्वच्छ र हरित वीरगञ्जका लागि वातावरण संरक्षण अभियान।</p>
+                    </div>
+                </div>
+                <div class="wwa-value-item">
+                    <i class="fa-solid fa-landmark" style="color: #0ea5e9; font-size: 1.5rem;"></i>
+                    <div>
+                        <h4 style="margin-bottom: 0.5rem;">सांस्कृतिक सम्पदा (Cultural Heritage)</h4>
+                        <p style="font-size: 0.95rem; color: #64748b;">स्थानीय कला, संस्कृति र परम्पराको संरक्षण र प्रवर्द्धन।</p>
+                    </div>
+                </div>
+                <div class="wwa-value-item">
+                    <i class="fa-solid fa-handshake" style="color: #f59e0b; font-size: 1.5rem;"></i>
+                    <div>
+                        <h4 style="margin-bottom: 0.5rem;">पारदर्शिता (Transparency)</h4>
+                        <p style="font-size: 0.95rem; color: #64748b;">आर्थिक र संस्थागत क्रियाकलापमा पूर्ण पारदर्शिता र जवाफदेहिता।</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- History Section -->
-    <section style="background: #0f172a; color: white; padding: 8rem 0;" id="history">
+    <!-- Target Beneficiaries -->
+    <section style="padding: 7rem 0;">
         <div class="container">
-            <div
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; align-items: center; margin-bottom: 4rem;">
-                <div>
-                    <h2 style="font-size: 3rem; color: white; margin-bottom: 2rem;">हाम्रो इतिहास <br><span style="font-size: 1.5rem; opacity: 0.8; font-weight: normal;">(Our History)</span></h2>
-                    <p
-                        style="font-size: 1.15rem; line-height: 1.9; color: rgba(255,255,255,0.7); margin-bottom: 1.5rem;">
-                        Kalikamai Youth Society started with a <strong>"Kalikamai Youth Society"</strong> taken by its
-                        founders in their early twenties to uplift their community.
-                    </p>
-                    <p style="font-size: 1.15rem; line-height: 1.9; color: rgba(255,255,255,0.7);">
-                        Born out of a shared passion for social justice, what began as informal gatherings soon
-                        blossomed into a structured movement that now spans generations and multiple local districts.
-                    </p>
+            <div class="text-center" style="margin-bottom: 4rem;">
+                <h2 style="font-size: 2.8rem;">लक्षित वर्गहरू <br><span style="font-size: 1.4rem; color: #64748b; font-weight: normal;">(Target Beneficiaries)</span></h2>
+                <p style="color: #64748b; font-size: 1.1rem; margin-top: 1rem;">यस संस्थाका कार्यक्रमहरू मुख्य रूपमा निम्न वर्गलाई लक्षित गरी सञ्चालन गरिनेछन्।</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; text-align: center;">
+                <div style="background: #f8fafc; border-radius: 20px; padding: 2rem 1.5rem; border: 1px solid #e2e8f0;">
+                    <i class="fa-solid fa-house-chimney-crack" style="font-size: 2rem; color: #fca311; margin-bottom: 1rem; display: block;"></i>
+                    <p style="font-weight: 600; color: #1e293b; margin: 0;">गरिब तथा विपन्न परिवार</p>
                 </div>
-                <div>
-                    <img src="assets/students.jpg" alt="Foundation"
-                        style="width: 100%; border-radius: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.3);">
+                <div style="background: #f8fafc; border-radius: 20px; padding: 2rem 1.5rem; border: 1px solid #e2e8f0;">
+                    <i class="fa-solid fa-person-cane" style="font-size: 2rem; color: #0ea5e9; margin-bottom: 1rem; display: block;"></i>
+                    <p style="font-weight: 600; color: #1e293b; margin: 0;">ज्येष्ठ नागरिक</p>
+                </div>
+                <div style="background: #f8fafc; border-radius: 20px; padding: 2rem 1.5rem; border: 1px solid #e2e8f0;">
+                    <i class="fa-solid fa-child" style="font-size: 2rem; color: #22c55e; margin-bottom: 1rem; display: block;"></i>
+                    <p style="font-weight: 600; color: #1e293b; margin: 0;">अनाथ तथा कमजोर बालबालिका</p>
+                </div>
+                <div style="background: #f8fafc; border-radius: 20px; padding: 2rem 1.5rem; border: 1px solid #e2e8f0;">
+                    <i class="fa-solid fa-user-graduate" style="font-size: 2rem; color: #8b5cf6; margin-bottom: 1rem; display: block;"></i>
+                    <p style="font-weight: 600; color: #1e293b; margin: 0;">विद्यार्थी तथा युवाहरू</p>
+                </div>
+                <div style="background: #f8fafc; border-radius: 20px; padding: 2rem 1.5rem; border: 1px solid #e2e8f0;">
+                    <i class="fa-solid fa-venus" style="font-size: 2rem; color: #e11d48; margin-bottom: 1rem; display: block;"></i>
+                    <p style="font-weight: 600; color: #1e293b; margin: 0;">महिला तथा बालिकाहरू</p>
+                </div>
+                <div style="background: #f8fafc; border-radius: 20px; padding: 2rem 1.5rem; border: 1px solid #e2e8f0;">
+                    <i class="fa-solid fa-wheelchair" style="font-size: 2rem; color: #f59e0b; margin-bottom: 1rem; display: block;"></i>
+                    <p style="font-weight: 600; color: #1e293b; margin: 0;">अपाङ्गता भएका व्यक्ति</p>
+                </div>
+                <div style="background: #f8fafc; border-radius: 20px; padding: 2rem 1.5rem; border: 1px solid #e2e8f0;">
+                    <i class="fa-solid fa-people-group" style="font-size: 2rem; color: #0ea5e9; margin-bottom: 1rem; display: block;"></i>
+                    <p style="font-weight: 600; color: #1e293b; margin: 0;">सम्पूर्ण स्थानीय समुदाय</p>
+                </div>
+                <div style="background: #f8fafc; border-radius: 20px; padding: 2rem 1.5rem; border: 1px solid #e2e8f0;">
+                    <i class="fa-solid fa-house-flood-water" style="font-size: 2rem; color: #ef4444; margin-bottom: 1rem; display: block;"></i>
+                    <p style="font-weight: 600; color: #1e293b; margin: 0;">विपद् प्रभावित नागरिक</p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Timeline -->
+    <!-- History / Journey -->
+    <section style="background: #0f172a; color: white; padding: 8rem 0;" id="history">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; align-items: center; margin-bottom: 4rem;">
+                <div>
+                    <h2 style="font-size: 3rem; color: white; margin-bottom: 2rem;">हाम्रो यात्रा <br><span style="font-size: 1.5rem; opacity: 0.8; font-weight: normal;">(Our Journey)</span></h2>
+                    <p style="font-size: 1.15rem; line-height: 1.9; color: rgba(255,255,255,0.7); margin-bottom: 1.5rem;">
+                        Hearts of Birgunj सन् <strong style="color: #fca311;">२०२५</strong> मा वीरगञ्जमा सामाजिक परिवर्तनको लागि समर्पित युवाहरूको एक साझा सपनाबाट जन्मियो।
+                    </p>
+                    <p style="font-size: 1.15rem; line-height: 1.9; color: rgba(255,255,255,0.7);">
+                        "मानवताको सेवा नै सबैभन्दा ठूलो धर्म हो" भन्ने भावनालाई आत्मसात् गर्दै, यो संस्थाले वीरगञ्ज तथा आसपासका क्षेत्रमा सामाजिक गतिविधिहरू सञ्चालन गर्ने संकल्प लिएको छ।
+                    </p>
+                </div>
+                <div>
+                    <img src="assets/students.jpg" alt="Hearts of Birgunj Foundation"
+                        style="width: 100%; border-radius: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.3);"
+                        onerror="this.style.display='none'">
+                </div>
+            </div>
             <div class="timeline-container">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <span style="color: #0ea5e9; font-weight: 800; font-size: 1.2rem;">THE BEGINNING</span>
-                        <h3 style="color: #1e293b; margin: 0.5rem 0;">A "Step" Taken</h3>
-                        <p style="color: #64748b;">Founders in their early twenties began small community efforts in
-                            Kalikamai RM, focusing on local issues.</p>
+                        <span style="color: #fca311; font-weight: 800; font-size: 1.2rem;">THE BEGINNING — 2025</span>
+                        <h3 style="color: #1e293b; margin: 0.5rem 0;">सपनाको बीज (A Dream Planted)</h3>
+                        <p style="color: #64748b;">वीरगञ्जका युवाहरूले मानवतापूर्ण सेवाको संकल्प लिँदै Hearts of Birgunj को स्थापना गरे। समाज परिवर्तनको यो यात्रा यहीँबाट सुरु भयो।</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <span style="color: #0ea5e9; font-weight: 800; font-size: 1.2rem;">REGISTRATION</span>
-                        <h3 style="color: #1e293b; margin: 0.5rem 0;">Formal Organization</h3>
-                        <p style="color: #64748b;">Officially registered under the Organization Registration Act, 2080
-                            B.S., becoming a recognized NGO.</p>
+                        <span style="color: #fca311; font-weight: 800; font-size: 1.2rem;">FIRST STEPS</span>
+                        <h3 style="color: #1e293b; margin: 0.5rem 0;">पहिलो कदम (First Programs)</h3>
+                        <p style="color: #64748b;">सामाजिक सेवा, स्वास्थ्य शिविर र शैक्षिक सामग्री वितरणका कार्यक्रमहरू सुरु गरी समुदायमा आशाको किरण छर्न सुरु गर्यौं।</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <span style="color: #0ea5e9; font-weight: 800; font-size: 1.2rem;">EXPANSION</span>
-                        <h3 style="color: #1e293b; margin: 0.5rem 0;">Green & Social Initiatives</h3>
-                        <p style="color: #64748b;">Launched major tree plantation and awareness campaigns, mobilizing
-                            hundreds of local youth.</p>
+                        <span style="color: #fca311; font-weight: 800; font-size: 1.2rem;">GROWING STRONGER</span>
+                        <h3 style="color: #1e293b; margin: 0.5rem 0;">विस्तार र विकास (Growth)</h3>
+                        <p style="color: #64748b;">वृक्षारोपण, रक्तदान, सांस्कृतिक कार्यक्रम लगायत विविध अभियानहरू सञ्चालन गर्दै संस्थाले आफ्नो कार्यक्षेत्र विस्तार गर्यो।</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <span style="color: #0ea5e9; font-weight: 800; font-size: 1.2rem;">NOW</span>
-                        <h3 style="color: #1e293b; margin: 0.5rem 0;">Empowering Generations</h3>
-                        <p style="color: #64748b;">Evolving into a multi-generational organization with programs
-                            spanning healthcare and education.</p>
+                        <span style="color: #0ea5e9; font-weight: 800; font-size: 1.2rem;">NOW — अहिले</span>
+                        <h3 style="color: #1e293b; margin: 0.5rem 0;">सेवाको निरन्तरता (Continuing Service)</h3>
+                        <p style="color: #64748b;">वीरगञ्ज महानगरपालिका तथा पर्सा जिल्लाका विभिन्न क्षेत्रहरूमा ६+ कार्यक्षेत्रमा सक्रिय, भविष्यमा मधेश प्रदेश र अन्य क्षेत्रसम्म पुग्ने लक्ष्यसहित।</p>
                     </div>
                 </div>
             </div>
@@ -368,53 +488,47 @@
         <div class="container footer-grid">
             <div class="footer-about">
                 <a href="index.html" class="logo footer-logo">
-                    <img src="assets/logo.jpeg" alt="Kalikamai Youth Society" class="logo-img">
+                    <img src="assets/logo.jpg" alt="Hearts of Birgunj" class="logo-img">
+                    <span class="logo-text" style="font-size: 1rem;">Hearts of Birgunj</span>
                 </a>
-                <p>Kalikamai Youth Society is dedicated to inspiring change, transforming lives, and fostering resilient
-                    communities through active youth participation.</p>
+                <p>Hearts of Birgunj — Serving Humanity, Inspiring Hope. वीरगञ्जमा सामाजिक सेवा, मानवता र सकारात्मक परिवर्तनको संस्था।</p>
                 <div class="social-links">
-                    <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer"><i
-                            class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i
-                            class="fa-brands fa-twitter"></i></a>
-                    <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"><i
-                            class="fa-brands fa-instagram"></i></a>
-                    <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer"><i
-                            class="fa-brands fa-youtube"></i></a>
+                    <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
-
             <div class="footer-links">
                 <h3>Our Work</h3>
                 <ul>
-                    <li><a href="work.html">Community Development</a></li>
-                    <li><a href="work.html">Education & Health</a></li>
-                    <li><a href="work.html">Environment Action</a></li>
-                    <li><a href="work.html">Crisis Response</a></li>
+                    <li><a href="work.html">सामाजिक सेवा</a></li>
+                    <li><a href="work.html">स्वास्थ्य तथा सरसफाइ</a></li>
+                    <li><a href="work.html">शिक्षा तथा युवा विकास</a></li>
+                    <li><a href="work.html">वातावरण संरक्षण</a></li>
+                    <li><a href="work.html">विपद् सहयोग</a></li>
                 </ul>
             </div>
-
             <div class="footer-links">
                 <h3>Quick Links</h3>
                 <ul>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="about.html#history">Our History</a></li>
+                    <li><a href="about.html#history">Our Journey</a></li>
                     <li><a href="projects.html">Impact Stories</a></li>
                     <li><a href="donate.html">Support Us</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
-
             <div class="footer-contact">
                 <h3>Contact</h3>
-                <p><i class="fa-solid fa-map-pin"></i> Kalikamai RM-02 (Bhedihari), Parsa</p>
+                <p><i class="fa-solid fa-map-pin"></i> Birgunj Mahanagarpalika, Parsa, Madhesh Province, Nepal</p>
                 <p><i class="fa-solid fa-phone"></i> +977-9763368173</p>
-                <p><i class="fa-solid fa-envelope"></i> kalikamaiyouthsociety@gmail.com</p>
+                <p><i class="fa-solid fa-envelope"></i> heartsofbirgunj@gmail.com</p>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2026 Kalikamai Youth Society. All Rights Reserved. Empowering Youth.</p>
+                <p>&copy; 2025 Hearts of Birgunj. All Rights Reserved. Serving Humanity, Inspiring Hope.</p>
             </div>
         </div>
     </footer>
