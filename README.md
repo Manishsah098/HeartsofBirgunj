@@ -297,7 +297,7 @@ Deploying the Kalikamai Youth Society platform to production requires understand
 
 ---
 
-### Option A: Deploy on Render.com (Recommended Cloud Host) status
+### Option A: Deploy on Render.com (Recommended Cloud Host) 
 Render provides managed hosting for Node.js web services with optional persistent disks.
 
 1. **Push your code to GitHub**:
