@@ -79,23 +79,12 @@ app.get('/projects.html', (req, res) => {
 });
 
 app.get('/work.html', (req, res) => {
-    db.all(`SELECT * FROM posts WHERE type = 'work' ORDER BY id ASC`, [], (err, rows) => {
+    db.all(`SELECT * FROM posts WHERE type = 'work' ORDER BY created_at DESC`, [], (err, rows) => {
         if (err) {
             console.error(err);
             return res.status(500).send("Database error");
         }
         res.render('work-dynamic', { works: rows });
-    });
-});
-
-app.get('/work/:id', (req, res) => {
-    db.get(`SELECT * FROM posts WHERE id = ?`, [req.params.id], (err, row) => {
-        if (err || !row) {
-            return res.status(404).send("Work page not found");
-        }
-        db.all(`SELECT id, title, icon FROM posts WHERE type = 'work' ORDER BY id ASC`, [], (err, otherWorks) => {
-            res.render('work-detail', { post: row, otherWorks: otherWorks || [] });
-        });
     });
 });
 
@@ -127,9 +116,6 @@ app.get('/news/:id', (req, res) => {
     db.get(`SELECT * FROM posts WHERE id = ?`, [req.params.id], (err, row) => {
         if (err || !row) {
             return res.status(404).send("Post not found");
-        }
-        if (row.type === 'work') {
-            return res.redirect('/work/' + row.id);
         }
         res.render('news-detail', { post: row });
     });
