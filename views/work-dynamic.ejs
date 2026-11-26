@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -60,98 +60,37 @@
             </div>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
-                <!-- Card 1 -->
-                <div class="work-area-card" style="border-left-color: #e11d48;">
-                    <h4 style="color: #e11d48;"><i class="fa-solid fa-hand-holding-heart"></i> क. सामाजिक सेवा तथा मानव सहयोग</h4>
-                    <ul>
-                        <li>गरिब तथा विपन्न परिवारलाई खाद्यान्न र आवश्यक सामग्री वितरण।</li>
-                        <li>असहाय तथा ज्येष्ठ नागरिकलाई सहयोग।</li>
-                        <li>चाडपर्व तथा विशेष अवसरमा सेवा कार्यक्रम।</li>
-                        <li>आपत्कालीन राहत तथा उद्धार कार्यमा सहयोग।</li>
-                    </ul>
+                <% 
+                const cardColors = ['#e11d48', '#16a34a', '#7c3aed', '#d97706', '#e11d48', '#dc2626'];
+                if (typeof works !== 'undefined' && works.length > 0) {
+                    works.forEach((work, index) => { 
+                        const color = cardColors[index % cardColors.length];
+                %>
+                <div class="work-area-card" style="border-left-color: <%= color %>; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <h4 style="color: <%= color %>;">
+                            <i class="<%= work.icon || 'fa-solid fa-hand-holding-heart' %>"></i> <%= work.title %>
+                        </h4>
+                        <% if (work.subtitle) { %>
+                            <p style="font-size: 0.95rem; color: #64748b; margin-bottom: 1rem; line-height: 1.6;"><%= work.subtitle %></p>
+                        <% } %>
+                        <div class="work-card-content">
+                            <%- work.content %>
+                        </div>
+                    </div>
+                    <div style="margin-top: 1.5rem; padding-top: 1.2rem; border-top: 1px dashed #e2e8f0;">
+                        <a href="/work/<%= work.id %>" class="btn btn-outline" style="width: 100%; justify-content: center; border-radius: 50px; font-weight: 600; font-size: 0.88rem; color: <%= color %>; border-color: <%= color %>;">
+                            पूरा विवरण हेर्नुहोस् (View Details) <i class="fa-solid fa-arrow-right" style="margin-left: 0.4rem;"></i>
+                        </a>
+                    </div>
                 </div>
-
-                <!-- Card 2 -->
-                <div class="work-area-card" style="border-left-color: #16a34a;">
-                    <h4 style="color: #16a34a;"><i class="fa-solid fa-heart-pulse"></i> ख. स्वास्थ्य तथा सरसफाइ</h4>
-                    <ul>
-                        <li>निःशुल्क स्वास्थ्य शिविर सञ्चालनमा सहयोग।</li>
-                        <li>रक्तदान कार्यक्रम तथा रक्तदाता सञ्जाल निर्माण।</li>
-                        <li>प्राथमिक उपचार तथा स्वास्थ्य सचेतना कार्यक्रम।</li>
-                        <li>सार्वजनिक स्थानमा सरसफाइ अभियान।</li>
-                        <li>गर्मी तथा भीडभाडका समयमा निःशुल्क पानी तथा शरबत वितरण।</li>
-                    </ul>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="work-area-card" style="border-left-color: #7c3aed;">
-                    <h4 style="color: #7c3aed;"><i class="fa-solid fa-graduation-cap"></i> ग. शिक्षा तथा युवा विकास</h4>
-                    <ul>
-                        <li>विद्यार्थीहरूलाई शैक्षिक सामग्री वितरण।</li>
-                        <li>शैक्षिक जनचेतना कार्यक्रम।</li>
-                        <li>युवा नेतृत्व तथा व्यक्तित्व विकास तालिम।</li>
-                        <li>विद्यार्थी तथा युवाहरूका लागि प्रेरणादायी कार्यक्रम।</li>
-                        <li>प्रतिभाशाली तथा आर्थिक रूपमा कमजोर विद्यार्थीलाई सहयोग।</li>
-                    </ul>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="work-area-card" style="border-left-color: #d97706;">
-                    <h4 style="color: #d97706;"><i class="fa-solid fa-leaf"></i> घ. वातावरण संरक्षण</h4>
-                    <ul>
-                        <li>वृक्षारोपण कार्यक्रम।</li>
-                        <li>प्लास्टिक न्यूनीकरण अभियान।</li>
-                        <li>वातावरण तथा सरसफाइसम्बन्धी जनचेतना।</li>
-                        <li>स्वच्छ र हरित वीरगञ्ज अभियान।</li>
-                    </ul>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="work-area-card" style="border-left-color: #e11d48;">
-                    <h4 style="color: #e11d48;"><i class="fa-solid fa-music"></i> ङ. कला, संस्कृति तथा मनोरञ्जन</h4>
-                    <ul>
-                        <li>स्थानीय कला तथा संस्कृतिको संरक्षण।</li>
-                        <li>सांस्कृतिक कार्यक्रम तथा महोत्सव आयोजना।</li>
-                        <li>युवा प्रतिभा पहिचान तथा प्रोत्साहन।</li>
-                        <li>नृत्य, संगीत, खेलकुद तथा सिर्जनात्मक प्रतियोगिता।</li>
-                        <li>सामाजिक एकता तथा सद्भाव बढाउने कार्यक्रम।</li>
-                    </ul>
-                </div>
-
-                <!-- Card 6 -->
-                <div class="work-area-card" style="border-left-color: #dc2626;">
-                    <h4 style="color: #dc2626;"><i class="fa-solid fa-triangle-exclamation"></i> च. विपद् तथा आपत्कालीन सहयोग</h4>
-                    <ul>
-                        <li>आगलागी, बाढी, दुर्घटना तथा अन्य विपद्मा सहयोग।</li>
-                        <li>राहत सामग्री संकलन तथा वितरण।</li>
-                        <li>स्वयंसेवक परिचालन।</li>
-                        <li>प्राथमिक उपचार तथा आपत्कालीन सहयोग।</li>
-                    </ul>
-                </div>
+                <%  });
+                } else { %>
+                    <p style="text-align: center; grid-column: 1 / -1; color: #64748b; font-size: 1.1rem; padding: 3rem 0;">हाल कुनै कार्यक्षेत्र फेला परेन।</p>
+                <% } %>
             </div>
         </div>
     </section>
-
-    <% if (typeof works !== 'undefined' && works.length > 0) { %>
-    <!-- Additional Initiatives Section -->
-    <section class="section work-section bg-light" id="initiatives" style="padding: 5rem 0 7rem;">
-        <div class="container text-center">
-            <span class="section-subtitle">Programs &amp; Projects</span>
-            <h2 class="section-title">हाम्रा थप <span class="highlight">पहलहरू</span></h2>
-
-            <div class="work-grid mt-5">
-                <% works.forEach(work => { %>
-                <div class="work-card">
-                    <div class="work-icon"><i class="<%= work.icon || 'fa-solid fa-users' %>"></i></div>
-                    <h3><%= work.title %></h3>
-                    <p><%= work.subtitle %></p>
-                    <a href="/news/<%= work.id %>" class="work-link">Learn More <i class="fa-solid fa-chevron-right"></i></a>
-                </div>
-                <% }) %>
-            </div>
-        </div>
-    </section>
-    <% } %>
 
     <!-- Footer -->
     <footer class="footer" id="contact-footer">
