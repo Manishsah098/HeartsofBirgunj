@@ -1,25 +1,478 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developer | Hearts of Birgunj</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Manish Kumar Sah | Founder, Bikrama Technosoft & Lead Developer</title>
+    <meta name="description" content="Meet Manish Kumar Sah, Founder of Bikrama Technosoft and Lead Fullstack Developer behind Hearts of Birgunj digital platform.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Site Stylesheet -->
     <link rel="stylesheet" href="/style.css">
+
     <style>
-        .dev-header { background: linear-gradient(135deg, #0f172a 0%, #1e293b 55%, #881337 100%); padding: 10rem 0 5rem; position: relative; overflow: hidden; }
-        .dev-header::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 80px; background: #f8fafc; clip-path: ellipse(55% 100% at 50% 100%); }
-        .dev-header h1 { color: #ffffff; font-size: clamp(2.5rem, 5vw, 3.8rem); font-weight: 800; text-align: center; margin: 0 0 1rem 0; font-family: var(--font-heading), 'Outfit', sans-serif; }
-        .dev-section { padding: 5rem 0 7rem; background-color: #f8fafc; display: flex; justify-content: center; }
-        .dev-card { background: #ffffff; border-radius: 20px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); padding: 3rem 2rem; text-align: center; max-width: 500px; width: 100%; border: 1px solid rgba(0, 0, 0, 0.04); position: relative; overflow: hidden; }
-        .dev-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, #e11d48, #f59e0b); }
-        .dev-avatar { width: 180px; height: 180px; border-radius: 50%; margin: 0 auto 2rem; overflow: hidden; border: 4px solid #e2e8f0; background: linear-gradient(135deg, #e2e8f0, #cbd5e1); display: flex; align-items: center; justify-content: center; }
-        .dev-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center top; transform: scale(1.35); }
-        .dev-role { display: inline-block; background: linear-gradient(135deg, #e11d48, #be123c); color: white; font-size: 0.85rem; font-weight: 700; padding: 0.4rem 1.2rem; border-radius: 50px; text-transform: uppercase; margin-bottom: 1.5rem; }
-        .dev-name { font-family: var(--font-heading, 'Outfit', sans-serif); font-size: 2rem; color: #1E293B; font-weight: 700; margin-bottom: 1.5rem; }
-        .dev-contact { color: #64748b; font-size: 1.1rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.8rem; font-weight: 500; }
-        .dev-contact i { color: #e11d48; font-size: 1.3rem; }
+        :root {
+            --dev-ruby: #e11d48;
+            --dev-ruby-dark: #be123c;
+            --dev-navy: #0f172a;
+            --dev-slate: #1e293b;
+            --dev-muted: #64748b;
+            --dev-bg: #f8fafc;
+            --dev-card-bg: #ffffff;
+        }
+
+        body {
+            background-color: var(--dev-bg);
+            color: #334155;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Hero Header */
+        .dev-hero {
+            background: linear-gradient(135deg, #090d16 0%, #0f172a 45%, #4c0519 100%);
+            padding: 9.5rem 0 5.5rem;
+            position: relative;
+            color: #ffffff;
+            overflow: hidden;
+        }
+
+        .dev-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 80% 20%, rgba(225, 29, 72, 0.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .dev-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background: var(--dev-bg);
+            clip-path: ellipse(55% 100% at 50% 100%);
+        }
+
+        .hero-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(225, 29, 72, 0.18);
+            border: 1px solid rgba(225, 29, 72, 0.4);
+            color: #fda4af;
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 1.2rem;
+        }
+
+        .hero-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(2.4rem, 5vw, 3.8rem);
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.15;
+            margin: 0 0 1rem 0;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: #cbd5e1;
+            max-width: 720px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Container & Layout */
+        .dev-main {
+            padding: 4rem 0 6rem;
+        }
+
+        .dev-grid {
+            display: grid;
+            grid-template-columns: 360px 1fr;
+            gap: 2.5rem;
+            align-items: start;
+        }
+
+        @media (max-width: 992px) {
+            .dev-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Profile Card (Left) */
+        .profile-card {
+            background: #ffffff;
+            border-radius: 24px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.08);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            position: sticky;
+            top: 100px;
+            overflow: hidden;
+        }
+
+        .profile-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #e11d48, #f59e0b);
+        }
+
+        .avatar-wrapper {
+            position: relative;
+            width: 170px;
+            height: 170px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .avatar-img-box {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #ffffff;
+            box-shadow: 0 8px 25px rgba(15, 23, 42, 0.15);
+            background: #e2e8f0;
+        }
+
+        .avatar-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 18%;
+            display: block;
+        }
+
+        .status-dot {
+            position: absolute;
+            bottom: 8px;
+            right: 12px;
+            width: 20px;
+            height: 20px;
+            background: #22c55e;
+            border: 3px solid #ffffff;
+            border-radius: 50%;
+            box-shadow: 0 2px 8px rgba(34, 197, 94, 0.5);
+        }
+
+        .profile-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin: 0 0 0.4rem 0;
+        }
+
+        .profile-role {
+            font-size: 0.95rem;
+            color: var(--dev-ruby);
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+        }
+
+        .profile-org {
+            font-size: 0.9rem;
+            color: #64748b;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info-list {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 1.2rem;
+            margin-bottom: 1.5rem;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.92rem;
+            color: #334155;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-item:hover {
+            color: var(--dev-ruby);
+        }
+
+        .contact-item i {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.05rem;
+            color: var(--dev-ruby);
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-btn {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f1f5f9;
+            color: #475569;
+            font-size: 1.15rem;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-3px);
+            color: #ffffff;
+        }
+
+        .social-btn.facebook:hover { background: #1877f2; border-color: #1877f2; }
+        .social-btn.instagram:hover { background: #e1306c; border-color: #e1306c; }
+        .social-btn.linkedin:hover { background: #0a66c2; border-color: #0a66c2; }
+        .social-btn.email:hover { background: #ea4335; border-color: #ea4335; }
+
+        .btn-whatsapp-full {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            background: #22c55e;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 0.85rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.35);
+            transition: all 0.25s ease;
+            width: 100%;
+        }
+
+        .btn-whatsapp-full:hover {
+            background: #16a34a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.45);
+        }
+
+        /* Detail Cards (Right) */
+        .content-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .dev-box {
+            background: #ffffff;
+            border-radius: 20px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04);
+            padding: 2.2rem;
+        }
+
+        .dev-box h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin: 0 0 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .dev-box h2 i {
+            color: var(--dev-ruby);
+            font-size: 1.35rem;
+        }
+
+        .dev-box p {
+            font-size: 1rem;
+            line-height: 1.75;
+            color: #475569;
+            margin: 0 0 1rem 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.25rem;
+            margin-top: 1.5rem;
+        }
+
+        .service-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: all 0.25s ease;
+        }
+
+        .service-card:hover {
+            border-color: #cbd5e1;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h4 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 0 0 0.5rem 0;
+        }
+
+        .service-card p {
+            font-size: 0.88rem;
+            line-height: 1.6;
+            color: #64748b;
+            margin: 0;
+        }
+
+        /* Project Showcase Banner */
+        .project-highlight {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            border-radius: 20px;
+            padding: 2.2rem;
+            color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-highlight::after {
+            content: '';
+            position: absolute;
+            right: -20px;
+            bottom: -20px;
+            width: 180px;
+            height: 180px;
+            background: radial-gradient(circle, rgba(225, 29, 72, 0.25) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .project-tag {
+            display: inline-block;
+            background: rgba(225, 29, 72, 0.25);
+            color: #fda4af;
+            border: 1px solid rgba(225, 29, 72, 0.4);
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 0.3rem 0.9rem;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+        }
+
+        .project-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.65rem;
+            font-weight: 800;
+            margin: 0 0 0.8rem 0;
+            color: #ffffff;
+        }
+
+        .project-desc {
+            color: #cbd5e1;
+            font-size: 0.98rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.9rem;
+            color: #e2e8f0;
+        }
+
+        .feature-item i {
+            color: #22c55e;
+        }
+
+        /* CTA Banner */
+        .cta-banner {
+            background: linear-gradient(135deg, rgba(225, 29, 72, 0.06) 0%, rgba(245, 158, 11, 0.08) 100%);
+            border: 2px dashed rgba(225, 29, 72, 0.25);
+            border-radius: 20px;
+            padding: 2.2rem;
+            text-align: center;
+        }
+
+        .cta-banner h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin: 0 0 0.6rem 0;
+        }
+
+        .cta-banner p {
+            font-size: 0.95rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto 1.5rem;
+            line-height: 1.6;
+        }
+
+        .cta-actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -53,41 +506,187 @@
         </div>
     </nav>
 
-    <!-- Header -->
-    <header class="dev-header">
-        <div class="container">
-            <h1>Meet The Developer</h1>
+    <!-- Hero Header -->
+    <header class="dev-hero">
+        <div class="container" style="text-align: center; position: relative; z-index: 2;">
+            <div class="hero-pill">
+                <i class="fa-solid fa-code"></i> Technology Partner &amp; Lead Architect
+            </div>
+            <h1 class="hero-title">Meet The Developer</h1>
+            <p class="hero-subtitle">
+                Designing, building, and maintaining modern digital solutions to empower non-profits, businesses, and communities.
+            </p>
         </div>
     </header>
 
-    <!-- Developer Section -->
-    <section class="dev-section">
-        <div class="container" style="display: flex; justify-content: center;">
-            <div class="dev-card">
-                <div class="dev-avatar">
-                    <img src="/assets/manish.jpg" alt="Manish Kumar Sah" style="width: 100%; height: 100%; object-fit: cover; object-position: center 18%;">
-                </div>
-                <span class="dev-role">Founder, Bikrama Technosoft • Fullstack Developer</span>
-                <h3 class="dev-name">Manish Kumar Sah</h3>
-                <p class="dev-contact"><i class="fa-brands fa-whatsapp"></i> +977 9811807618</p>
-                <p class="dev-contact"><i class="fa-solid fa-phone"></i> +91 7250140014</p>
-                
-                <div class="dev-socials" style="display: flex; justify-content: center; gap: 1rem; margin-top: 1.5rem; margin-bottom: 1.5rem;">
-                    <a href="https://www.facebook.com/share/1BrpTHK33A/" target="_blank" rel="noopener noreferrer" style="color: #64748b; font-size: 1.5rem; transition: color 0.3s;" onmouseover="this.style.color='#0ea5e9'" onmouseout="this.style.color='#64748b'"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/manishshah2332?igsh=ajN1emN1bXF2aG1p" target="_blank" rel="noopener noreferrer" style="color: #64748b; font-size: 1.5rem; transition: color 0.3s;" onmouseover="this.style.color='#e1306c'" onmouseout="this.style.color='#64748b'"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/manish-kumar-sah-917116367?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" style="color: #64748b; font-size: 1.5rem; transition: color 0.3s;" onmouseover="this.style.color='#0a66c2'" onmouseout="this.style.color='#64748b'"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="mailto:example@gmail.com" style="color: #64748b; font-size: 1.5rem; transition: color 0.3s;" onmouseover="this.style.color='#ea4335'" onmouseout="this.style.color='#64748b'"><i class="fa-solid fa-envelope"></i></a>
-                </div>
+    <!-- Main Content Section -->
+    <main class="dev-main">
+        <div class="container">
+            <div class="dev-grid">
 
-                <div style="border-top: 1px solid #e2e8f0; padding-top: 1.5rem; margin-top: 1rem;">
-                    <p style="color: #475569; font-size: 0.95rem; line-height: 1.5;">
-                        For free website and web application contact us.<br>
-                        <strong style="color: #1e293b; display: inline-block; margin-top: 0.5rem;">Powered by Bikrama Technosoft.</strong>
-                    </p>
-                </div>
+                <!-- Left Column: Profile Card -->
+                <aside class="profile-card">
+                    <div class="avatar-wrapper">
+                        <div class="avatar-img-box">
+                            <img src="/assets/manish.jpg" alt="Manish Kumar Sah">
+                        </div>
+                        <span class="status-dot" title="Available for Development & Consulting"></span>
+                    </div>
+
+                    <h2 class="profile-name">Manish Kumar Sah</h2>
+                    <div class="profile-role">Founder &amp; Fullstack Developer</div>
+                    <div class="profile-org">Bikrama Technosoft</div>
+
+                    <!-- Direct Contact List -->
+                    <div class="contact-info-list">
+                        <a href="https://wa.me/9779811807618" target="_blank" rel="noopener noreferrer" class="contact-item">
+                            <i class="fa-brands fa-whatsapp" style="color: #22c55e;"></i>
+                            <span>+977 9811807618 (WhatsApp)</span>
+                        </a>
+                        <a href="tel:+917250140014" class="contact-item">
+                            <i class="fa-solid fa-phone" style="color: #0284c7;"></i>
+                            <span>+91 7250140014 (Call)</span>
+                        </a>
+                        <a href="mailto:heartsofbirgunj@gmail.com" class="contact-item">
+                            <i class="fa-solid fa-envelope" style="color: #e11d48;"></i>
+                            <span>Contact via Email</span>
+                        </a>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-location-dot" style="color: #f59e0b;"></i>
+                            <span>Birgunj, Parsa, Nepal</span>
+                        </div>
+                    </div>
+
+                    <!-- Verified Social Links -->
+                    <div class="social-buttons">
+                        <a href="https://www.facebook.com/share/1BrpTHK33A/" target="_blank" rel="noopener noreferrer" class="social-btn facebook" title="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/manishshah2332?igsh=ajN1emN1bXF2aG1p" target="_blank" rel="noopener noreferrer" class="social-btn instagram" title="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/manish-kumar-sah-917116367?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="social-btn linkedin" title="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="mailto:heartsofbirgunj@gmail.com" class="social-btn email" title="Send Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
+
+                    <a href="https://wa.me/9779811807618" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-full">
+                        <i class="fa-brands fa-whatsapp" style="font-size: 1.25rem;"></i>
+                        <span>Chat on WhatsApp</span>
+                    </a>
+                </aside>
+
+                <!-- Right Column: Professional Showcase Stack -->
+                <section class="content-stack">
+
+                    <!-- Box 1: About the Developer & Vision -->
+                    <div class="dev-box">
+                        <h2><i class="fa-solid fa-user-astronaut"></i> About Manish Kumar Sah</h2>
+                        <p>
+                            Manish Kumar Sah is a passionate fullstack developer and the founder of <strong>Bikrama Technosoft</strong>. With an emphasis on modern web architecture, clean visual interfaces, and resilient backend systems, Manish crafts digital experiences that serve meaningful community missions.
+                        </p>
+                        <p>
+                            Serving as the official Technology Partner for <strong>Hearts of Birgunj</strong>, Manish architected and deployed this comprehensive non-profit portal pro bono to facilitate community engagement, emergency aid transparency, youth participation, and volunteer mobilization across Birgunj and the Terai region.
+                        </p>
+                    </div>
+
+                    <!-- Box 2: Services & Technical Expertise -->
+                    <div class="dev-box">
+                        <h2><i class="fa-solid fa-laptop-code"></i> Technical Services &amp; Capabilities</h2>
+                        <p>
+                            Through Bikrama Technosoft, Manish delivers end-to-end technology solutions tailored for enterprises, startups, educational institutions, and non-governmental organizations.
+                        </p>
+
+                        <div class="services-grid">
+                            <div class="service-card">
+                                <div class="service-icon" style="background: rgba(22, 163, 74, 0.1); color: #16a34a;">
+                                    <i class="fa-brands fa-node-js"></i>
+                                </div>
+                                <h4>Fullstack Web Apps</h4>
+                                <p>Modern scalable platforms built with Node.js, Express, RESTful APIs, and responsive frontends.</p>
+                            </div>
+
+                            <div class="service-card">
+                                <div class="service-icon" style="background: rgba(2, 132, 199, 0.1); color: #0284c7;">
+                                    <i class="fa-solid fa-database"></i>
+                                </div>
+                                <h4>Database &amp; Systems</h4>
+                                <p>Robust data modeling, secure database management (SQLite / SQL), and optimized query architectures.</p>
+                            </div>
+
+                            <div class="service-card">
+                                <div class="service-icon" style="background: rgba(225, 29, 72, 0.1); color: #e11d48;">
+                                    <i class="fa-solid fa-palette"></i>
+                                </div>
+                                <h4>Modern UI / UX</h4>
+                                <p>Pixel-perfect responsive interfaces, intuitive navigation, fast mobile rendering, and accessibility standards.</p>
+                            </div>
+
+                            <div class="service-card">
+                                <div class="service-icon" style="background: rgba(139, 92, 246, 0.1); color: #8b5cf6;">
+                                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                                </div>
+                                <h4>Cloud &amp; Deployment</h4>
+                                <p>Production containerization with Docker, server provisioning, automated backups, and 24/7 uptime monitoring.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Box 3: Featured Platform Showcase -->
+                    <div class="project-highlight">
+                        <span class="project-tag"><i class="fa-solid fa-award" style="margin-right: 0.35rem;"></i> Featured Production Platform</span>
+                        <h3 class="project-title">Hearts of Birgunj Web Infrastructure</h3>
+                        <p class="project-desc">
+                            A complete, production-ready web platform developed to support humanitarian efforts, youth empowerment, and emergency disaster relief in Birgunj, Nepal.
+                        </p>
+
+                        <div class="project-features">
+                            <div class="feature-item">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>Interactive Impact &amp; Work Portals</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>Volunteer Management System</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>Multi-language Nepali &amp; English UI</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>Dockerized High-Speed Deployment</span>
+                            </div>
+                        </div>
+
+                        <a href="/" class="btn btn-primary" style="padding: 0.65rem 1.6rem; border-radius: 50px; font-weight: 700; font-size: 0.9rem;">
+                            <i class="fa-solid fa-arrow-left" style="margin-right: 0.4rem;"></i> Explore Live Website
+                        </a>
+                    </div>
+
+                    <!-- Box 4: CTA & Collaboration Banner -->
+                    <div class="cta-banner">
+                        <h3>Need a Website or Web Application for Your Cause?</h3>
+                        <p>
+                            Bikrama Technosoft provides professional consultation, development, and digital transformation for social causes, NGOs, and businesses. Let's discuss your ideas.
+                        </p>
+                        <div class="cta-actions">
+                            <a href="https://wa.me/9779811807618" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="border-radius: 50px; padding: 0.75rem 1.8rem; font-weight: 700; background: #22c55e; border-color: #22c55e;">
+                                <i class="fa-brands fa-whatsapp" style="margin-right: 0.5rem; font-size: 1.1rem;"></i> Contact on WhatsApp
+                            </a>
+                            <a href="tel:+917250140014" class="btn btn-outline" style="border-radius: 50px; padding: 0.75rem 1.8rem; font-weight: 700; color: #0f172a; border-color: #cbd5e1;">
+                                <i class="fa-solid fa-phone" style="margin-right: 0.5rem; color: #e11d48;"></i> Call +91 7250140014
+                            </a>
+                        </div>
+                    </div>
+
+                </section>
             </div>
         </div>
-    </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer" id="contact">
@@ -100,7 +699,6 @@
                     communities through active youth participation.</p>
                 <div class="social-links">
                     <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
                     <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
                 </div>
@@ -110,7 +708,7 @@
                 <h3>Our Work</h3>
                 <ul>
                     <li><a href="/work.html">Community Development</a></li>
-                    <li><a href="/work.html">Education & Health</a></li>
+                    <li><a href="/work.html">Education &amp; Health</a></li>
                     <li><a href="/work.html">Environment Action</a></li>
                     <li><a href="/work.html">Crisis Response</a></li>
                 </ul>
@@ -131,15 +729,16 @@
                 <h3>Contact</h3>
                 <p><i class="fa-solid fa-map-pin"></i> Birgunj Mahanagarpalika, Parsa, Nepal</p>
                 <p><i class="fa-solid fa-phone"></i> +977-9763368173</p>
-                <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> 
-                        <a href="mailto:heartsofbirgunj@gmail.com"
-                            style="color: inherit; text-decoration: none;">heartsofbirgunj@gmail.com</a></p>
+                <p><i class="fa-solid fa-envelope"></i> 
+                    <a href="mailto:heartsofbirgunj@gmail.com" style="color: inherit; text-decoration: none;">heartsofbirgunj@gmail.com</a>
+                </p>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="container">
                 <p>&copy; 2025 Hearts of Birgunj. All Rights Reserved. Serving Humanity, Inspiring Hope. | 
-                        <a href="/developer.html" style="color: #0ea5e9; text-decoration: none;">Developer Info</a></p>
+                    <a href="/developer.html" style="color: #fda4af; text-decoration: underline;">Developer Profile</a>
+                </p>
             </div>
         </div>
     </footer>
