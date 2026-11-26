@@ -398,16 +398,55 @@
     </section>
 
     <!-- Developer Info Banner -->
-    <section class="dev-banner" style="background: linear-gradient(135deg, #f8fafc, #e2e8f0); padding: 3rem 0; border-top: 1px solid #cbd5e1;">
-        <div class="container" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem;">
-            <div style="width: 130px; height: 130px; border-radius: 50%; overflow: hidden; border: 4px solid #fff; box-shadow: 0 8px 20px rgba(14, 165, 233, 0.4), 0 0 0 3px #0ea5e9; margin-bottom: 0.5rem; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                <img src="/assets/developer.jpg" alt="Manish Kumar Sah" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; transform: scale(1.2);" onerror="this.parentElement.innerHTML='<i class=\'fa-solid fa-code\' style=\'font-size: 3.5rem; color: #0ea5e9; display: flex; align-items: center; justify-content: center; height: 100%;\'></i>';">
+    <section class="dev-banner" style="background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%); padding: 4.5rem 0; border-top: 1px solid #e2e8f0; position: relative;">
+        <div class="container" style="max-width: 900px; margin: 0 auto;">
+            <div style="background: #ffffff; border-radius: 28px; padding: 3rem 2.5rem; box-shadow: 0 15px 40px rgba(15, 23, 42, 0.06); border: 1px solid rgba(226, 232, 240, 0.9); display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; overflow: hidden;">
+                <!-- Decorative top gradient bar -->
+                <div style="position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, #e11d48, #f59e0b, #0284c7);"></div>
+
+                <!-- Avatar with active indicator -->
+                <div style="position: relative; margin-bottom: 1.5rem;">
+                    <div style="width: 140px; height: 140px; border-radius: 50%; overflow: hidden; border: 4px solid #ffffff; box-shadow: 0 10px 30px rgba(225, 29, 72, 0.25), 0 0 0 3px #e11d48; transition: transform 0.3s ease;">
+                        <img src="/assets/manish.jpg" alt="Manish Kumar Sah" style="width: 100%; height: 100%; object-fit: cover; object-position: center 18%;">
+                    </div>
+                    <span style="position: absolute; bottom: 4px; right: 8px; width: 22px; height: 22px; background: #22c55e; border: 3px solid #ffffff; border-radius: 50%;" title="Active Developer"></span>
+                </div>
+
+                <!-- Developer Title & Bio -->
+                <span style="display: inline-block; background: rgba(225, 29, 72, 0.08); color: #be123c; font-size: 0.8rem; font-weight: 700; padding: 0.35rem 1.1rem; border-radius: 50px; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 0.8rem;">
+                    <i class="fa-solid fa-code" style="margin-right: 0.4rem;"></i> Website Creator &amp; Tech Partner
+                </span>
+
+                <h3 style="margin: 0; font-family: var(--font-heading, 'Outfit', sans-serif); font-size: 1.85rem; font-weight: 800; color: #0f172a;">
+                    Designed &amp; Developed by Manish Kumar Sah
+                </h3>
+
+                <p style="margin: 0.6rem 0 1.2rem 0; color: #475569; font-size: 1.05rem; font-weight: 500;">
+                    <strong style="color: #0f172a;">Founder of Bikrama Technosoft</strong> &bull; Fullstack Web &amp; Mobile Developer
+                </p>
+
+                <p style="max-width: 650px; margin: 0 auto 1.8rem auto; color: #64748b; font-size: 0.95rem; line-height: 1.7;">
+                    Crafting modern, responsive web experiences and scalable digital platforms for businesses, NGOs, and community organizations with modern performance and design standards.
+                </p>
+
+                <!-- Skill & Tech Pills -->
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin-bottom: 2rem;">
+                    <span style="background: #f8fafc; border: 1px solid #e2e8f0; color: #334155; padding: 0.35rem 0.9rem; border-radius: 50px; font-size: 0.82rem; font-weight: 600;"><i class="fa-brands fa-node-js" style="color: #16a34a; margin-right: 0.3rem;"></i> Node.js &amp; Express</span>
+                    <span style="background: #f8fafc; border: 1px solid #e2e8f0; color: #334155; padding: 0.35rem 0.9rem; border-radius: 50px; font-size: 0.82rem; font-weight: 600;"><i class="fa-solid fa-database" style="color: #0284c7; margin-right: 0.3rem;"></i> SQLite &amp; Databases</span>
+                    <span style="background: #f8fafc; border: 1px solid #e2e8f0; color: #334155; padding: 0.35rem 0.9rem; border-radius: 50px; font-size: 0.82rem; font-weight: 600;"><i class="fa-solid fa-palette" style="color: #e11d48; margin-right: 0.3rem;"></i> Modern UI/UX</span>
+                    <span style="background: #f8fafc; border: 1px solid #e2e8f0; color: #334155; padding: 0.35rem 0.9rem; border-radius: 50px; font-size: 0.82rem; font-weight: 600;"><i class="fa-solid fa-cloud" style="color: #8b5cf6; margin-right: 0.3rem;"></i> Docker &amp; Cloud Deployment</span>
+                </div>
+
+                <!-- Buttons & Contact -->
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 1rem;">
+                    <a href="/developer.html" class="btn btn-primary" style="padding: 0.75rem 1.8rem; border-radius: 50px; font-weight: 700; font-size: 0.95rem; box-shadow: 0 4px 15px rgba(225, 29, 72, 0.35);">
+                        <i class="fa-solid fa-user" style="margin-right: 0.5rem;"></i> View Developer Profile
+                    </a>
+                    <a href="https://wa.me/9779811807618" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding: 0.75rem 1.5rem; border-radius: 50px; font-weight: 600; font-size: 0.95rem; border-color: #22c55e; color: #16a34a; background: rgba(34, 197, 94, 0.05);">
+                        <i class="fa-brands fa-whatsapp" style="margin-right: 0.5rem; font-size: 1.1rem; color: #22c55e;"></i> WhatsApp (+977 9811807618)
+                    </a>
+                </div>
             </div>
-            <div>
-                <h3 style="margin: 0; font-family: 'Outfit', sans-serif; font-size: 1.5rem; color: #1e293b;">Designed & Developed by Manish Kumar Sah</h3>
-                <p style="margin: 0.5rem 0 0 0; color: #475569; font-size: 1rem;">Founder of Bikrama Technosoft | Fullstack Developer</p>
-            </div>
-            <a href="/developer.html" class="btn btn-outline" style="margin-top: 0.5rem; border-color: #0ea5e9; color: #0ea5e9;">Learn More About the Developer</a>
         </div>
     </section>
 
