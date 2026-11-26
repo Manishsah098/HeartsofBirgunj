@@ -1627,3 +1627,61 @@ body.mobile-menu-open {
     background: var(--gradient-primary); 
 }
 
+/* Work Area Cards (कार्यक्षेत्रहरू) */
+.work-area-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 2.2rem 2rem;
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    border-left: 5px solid var(--primary);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    position: relative;
+}
+
+.work-area-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+}
+
+.work-area-card h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.work-area-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.work-area-card ul li {
+    position: relative;
+    padding-left: 1.3rem;
+    color: #475569;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.work-area-card ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: -2px;
+    color: inherit;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+
