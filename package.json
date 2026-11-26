@@ -1,7 +1,7 @@
 {
-  "name": "kalikamai-youth-society",
+  "name": "hearts-of-birgunj",
   "version": "1.0.0",
-  "description": "Welcome to the official website repository for the **Kalikamai Youth Society**, a youth-led NGO dedicated to empowering disenfranchised communities in Nepal to achieve sustainable development and social justice.",
+  "description": "Official website for Hearts of Birgunj, an NGO dedicated to social service, humanity, and youth empowerment in Birgunj, Nepal.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -9,16 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Manishsah098/Kalikamai.git"
+    "url": "git+https://github.com/Manishsah098/HeartsofBirgunj.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Hearts of Birgunj",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/Manishsah098/Kalikamai/issues"
+    "url": "https://github.com/Manishsah098/HeartsofBirgunj/issues"
   },
-  "homepage": "https://github.com/Manishsah098/Kalikamai#readme",
+  "homepage": "https://github.com/Manishsah098/HeartsofBirgunj#readme",
   "dependencies": {
     "bcryptjs": "^3.0.3",
     "ejs": "^5.0.2",
