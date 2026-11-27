@@ -571,7 +571,7 @@ A production-ready [`Dockerfile`](Dockerfile) is provided in the repository.
 |---|---|
 | 🏢 **Organization** | **Kalikamai Youth Society (कालीकामाई युवा समाज)** |
 | 📍 **Address** | Kalikamai Rural Municipality-02 (Bhedihari), Parsa, Madhesh Province, Nepal |
-| 📞 **Phone** | `+977-9763368173` |
+| 📞 **Phone** | `+977 980-7153772` |
 | 📧 **Official Email** | [kalikamaiyouthsociety@gmail.com](mailto:kalikamaiyouthsociety@gmail.com) |
 | 🌐 **Facebook Page** | [Kalikamai Yuva Samaj](https://www.facebook.com/kalikama.i.yuva.samaja) |
 
